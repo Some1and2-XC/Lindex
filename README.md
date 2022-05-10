@@ -1,10 +1,17 @@
- # Lindex *[List Index]*
- ### by @some1and2
+# Lindex *[List Index]*
+### by @some1and2
 A `python` Library created to improve functionality of Nested Dictionaries in Python
 
- # Functionality::
- 
- - Making a Lindex Dictionary
+# Usage::
+```python
+from Lindex import lindex
+dictionary = {}
+dictionary = lindex(dictionary)
+```
+
+# Functionality::
+
+- Making a Lindex Dictionary
 	```python
 	dictionary = lindex(dictionary)
 	```
@@ -29,9 +36,14 @@ A `python` Library created to improve functionality of Nested Dictionaries in Py
 	```
 	whatever value is at the end of `dictionary[path[0]][path[1]][path[2]]...` will be added added with `num`
 
- - Ability to pretty print dictionaries
+- Ability to pretty print dictionaries
 	```python
 	dictionary.pprint()
 	```
+
+# Installation::
+```python
+pip install Lindex
+```
 ---
 **Documentation** *[Coming Soon]*
