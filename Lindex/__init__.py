@@ -10,7 +10,7 @@ class lindex(dict):
 			else:
 				return EmptyString * SpaceAmnt + str(dictionary)
 		print(PrintSubsection(self, EmptyString))
-		return True
+		return
 
 	# Add num to self[arg[0]][arg[1]][arg2]...
 	def add(self, *args, num: int = None) -> bool:
@@ -20,9 +20,10 @@ class lindex(dict):
 		OldNum = self.RTN(*args)
 		if (type(OldNum) == int or type(OldNum) == float) and (type(num) == int or type(num) == float) :
 			self.set(*args, num = num + OldNum)
-			return True
+			return
 		else:
-			return False
+			assert False
+			return
 
 	# Sets self[arg[0]][arg[1]][arg2]... to num
 	def set(self, *args, num = None) -> bool:
@@ -43,7 +44,7 @@ class lindex(dict):
 				States[-i-2][Indexes[-i-1]] = States[-i-1]
 			return States[0]
 		self = super().__init__(Write(args, Carve(self, args, num)))
-		return True
+		return
 
 	# Returns self[arg[0]][arg[1]][arg2]...
 	def RTN(self, *args):
@@ -51,6 +52,7 @@ class lindex(dict):
 			if len(Indexes) == 0:
 				return dictionary
 			if Indexes[0] not in dictionary:
-				return False
+				assert False
+				return
 			return Carve(dictionary[Indexes[0]], Indexes[1:])
 		return Carve(self, args)
