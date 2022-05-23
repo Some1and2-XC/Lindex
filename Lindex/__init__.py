@@ -76,6 +76,3 @@ class lindex(dict):
 		except KeyError as e:
 			print(f"KeyError: {e}\nIgnoring Exception on `RTN`")
 
-f = lindex(StringIndexes=0)
-f.set(1, 2, 3, 4)
-f.pprint()
