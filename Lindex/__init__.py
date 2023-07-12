@@ -38,7 +38,8 @@ class lindex(dict):
 			self.set(*args, OldValue + value)
 			return True
 		except TypeError as e:
-			print(f"TypeError: {e}\nIgnoring Exception on `add`")
+			if self.debug:
+				print(f"TypeError: {e}\nIgnoring Exception on `add`")
 			return False
 
 	# Sets self[arg[0]][arg[1]][arg2]... to value
