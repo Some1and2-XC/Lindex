@@ -7,7 +7,7 @@ from pathlib import Path
 setup(
 	name="Lindex",
 	packages=find_packages(include=["Lindex"]),
-	version="1.1.0",
+	version="1.1.1",
 	description="A python Library created to improve functionality of Nested Dictionaries in Python",
 	author="@some1and2",
 	author_email='04x0xx@gmail.com',
